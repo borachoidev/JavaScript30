@@ -1,0 +1,24 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a.back {
+  position: fixed;
+  color: rgb(162, 137, 231);
+  background-color: black;
+  padding: 1%;
+  border-radius: 50px;
+  top: 50px;
+  left: 50px;
+}
+
+a.back:hover {
+  color: rgb(69, 24, 151);
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px rgb(162, 137, 231) solid;
+}
+
+li {
+  list-style: none;
+}
