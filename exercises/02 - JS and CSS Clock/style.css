@@ -1,0 +1,50 @@
+html {
+  background: #ffddff url(https://picsum.photos/1500/1000?blur=5);
+  background-size: cover;
+  font-family: 'helvetica neue';
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  /* 시계 바늘이 원중심으로 돌아가기 위해transform -origin을 추가한다 */
+  transform-origin: 100%;
+  /*초기 시계바늘이 12시0분에 있도록 90도 변형시킨다*/
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  /*시계 바늘이 움직이는 것처럼 반동을 준다*/
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
