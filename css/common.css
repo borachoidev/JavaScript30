@@ -11,6 +11,7 @@ a.back {
   border-radius: 50px;
   top: 50px;
   left: 50px;
+  z-index: 10;
 }
 
 a.back:hover {
